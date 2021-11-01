@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2021-11-01
+
 ### Added
 
 - Built with Tailwind CSS JIT for minified stylesheets without any excess code
@@ -16,3 +18,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - HTML and Emoji support
 - Fathom Analytics and Google Analytics support
 - Favicons support
+
+[unreleased]: https://github.com/jpanther/lynx/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/jpanther/lynx/releases/tags/v1.0.0
