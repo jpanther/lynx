@@ -1,0 +1,6 @@
+i18n:
+  - i18n/*
+
+documentation:
+  - "*.md"
+  - exampleSite/content/*

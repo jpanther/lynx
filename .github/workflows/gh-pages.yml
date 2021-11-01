@@ -1,0 +1,35 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - stable
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+
+      - name: Build
+        working-directory: ./exampleSite
+        run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/lynx/
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/stable' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./exampleSite/public

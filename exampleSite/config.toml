@@ -1,0 +1,20 @@
+theme = "lynx"
+languageCode = "en-au"
+defaultContentLanguage = "en"
+
+title = "Lynx"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+enableEmoji = true
+disableKinds = ["taxonomy", "term"]
+
+[author]
+  name = "Lynx"
+  image = "author.jpg"
+  links = [
+    { github = "https://github.com/jpanther/lynx" },
+    { discord = "https://discord.gg/invitecode" },
+    { instagram = "https://instagram.com/username" },
+    { soundcloud = "https://soundcloud.com/username" },
+    { twitter = "https://twitter.com/username" },
+  ]

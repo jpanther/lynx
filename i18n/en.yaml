@@ -1,0 +1,32 @@
+link:
+  codepen: CodePen
+  dev: DEV
+  discord: Discord
+  dribbble: Dribbble
+  email: Email
+  facebook: Facebook
+  foursquare: Foursquare
+  github: GitHub
+  gitlab: Gitlab
+  instagram: Instagram
+  keybase: Keybase
+  lastfm: Last.fm
+  link: Website
+  linkedin: LinkedIn
+  mastodon: Mastodon
+  medium: Medium
+  orcid: ORCiD
+  pinterest: Pinterest
+  reddit: Reddit
+  researchgate: ResearchGate
+  slack: Slack
+  snapchat: Snapchat
+  soundcloud: Soundcloud
+  steam: Steam
+  tiktok: TikTok
+  twitch: Twitch
+  twitter: Twitter
+  youtube: YouTube
+
+footer:
+  powered_by: "Powered by {{ .Hugo }} &amp; {{ .Lynx }}"

@@ -1,0 +1,46 @@
+# baseURL = "https://your_domain.com/"
+languageCode = "en"
+defaultContentLanguage = "en"
+
+title = "Lynx"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+enableEmoji = true
+disableKinds = ["taxonomy", "term"]
+
+[author]
+  # name = "Your name here"
+  # image = "img/author.jpg"
+  links = [
+    # { email = "mailto:hello@your_domain.com" },
+    # { link = "https://link-to-some-website.com/" },
+    # { codepen = "https://codepen.io/username" },
+    # { dev = "https://dev.to/username" },
+    # { discord = "https://discord.gg/invitecode" },
+    # { dribbble = "https://dribbble.com/username" },
+    # { facebook = "https://facebook.com/username" },
+    # { foursquare = "https://foursquare.com/username" },
+    # { github = "https://github.com/username" },
+    # { gitlab = "https://gitlab.com/username" },
+    # { instagram = "https://instagram.com/username" },
+    # { keybase = "https://keybase.io/username" },
+    # { lastfm = "https://lastfm.com/user/username" },
+    # { linkedin = "https://linkedin.com/in/username" },
+    # { mastodon = "https://mastodon.instance/@username" },
+    # { medium = "https://medium.com/username" },
+    # { pinterest = "https://pinterest.com/username" },
+    # { reddit = "https://reddit.com/user/username" },
+    # { slack = "https://workspace.url/team/userid" },
+    # { snapchat = "https://snapchat.com/add/username" },
+    # { soundcloud = "https://soundcloud.com/username" },
+    # { steam = "https://steamcommunity.com/profiles/userid" },
+    # { tiktok = "https://tiktok.com/@username" },
+    # { twitch = "https://twitch.tv/username" },
+    # { twitter = "https://twitter.com/username" },
+    # { youtube = "https://youtube.com/username" },
+  ]
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.86.1"

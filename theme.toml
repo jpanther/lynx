@@ -1,0 +1,16 @@
+# Lynx theme for Hugo
+
+name = "lynx"
+license = "MIT"
+licenselink = "https://github.com/jpanther/lynx/blob/master/LICENSE"
+description = "A links page theme for Hugo built with Tailwind CSS."
+
+homepage = "https://github.com/jpanther/lynx/"
+demosite = "https://jpanther.github.io/lynx/"
+
+tags = ["minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
+features = ["dark mode", "emoji"]
+
+[author]
+  name = "James Panther"
+  homepage = "https://jamespanther.com/"
