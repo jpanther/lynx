@@ -29,7 +29,7 @@
               target="_blank"
               rel="me noopener noreferrer"
               ><div class="">
-                <span class="mr-1">{{ partial "icon.html" $icon }}</span>{{ $text }}
+                <span class="mr-1">{{ partial "icon.html" $icon }}</span>{{ $text | emojify }}
               </div></a
             >
           {{ end }}
