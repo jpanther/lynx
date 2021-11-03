@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Ability to override individual link parameters
 - French translation ([#2](https://github.com/jpanther/lynx/pull/2))
 
 ## [1.0.0] - 2021-11-01

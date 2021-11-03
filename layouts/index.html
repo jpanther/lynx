@@ -14,22 +14,27 @@
     {{ with .Site.Author.links }}
       <div class="flex flex-col flex-wrap min-w-full mt-4 sm:min-w-0">
         {{ range $links := . }}
-          {{ range $name, $url := $links }}
+          {{ range $type, $data := $links }}
+            {{ $href := $data }}
+            {{ $icon := $type }}
+            {{ $text := i18n (printf "link.%s" $type) }}
+            {{ if reflect.IsMap $data }}
+              {{ with $data.href }}{{ $href = . }}{{ end }}
+              {{ with $data.icon }}{{ $icon = . }}{{ end }}
+              {{ with $data.text }}{{ $text = . }}{{ end }}
+            {{ end }}
             <a
-              class="link link-{{ $name }} sm:px-24 min-w-full py-2 mb-3 text-lg rounded"
-              href="{{ $url }}"
+              class="link link-{{ $type }} sm:px-24 min-w-full py-2 mb-3 text-lg rounded"
+              href="{{ $href }}"
               target="_blank"
-              alt="{{ $name | title }}"
               rel="me noopener noreferrer"
               ><div class="">
-                <span class="mr-1">{{ partial "icon.html" $name }}</span
-                >{{ i18n (printf "link.%s" $name) }}
+                <span class="mr-1">{{ partial "icon.html" $icon }}</span>{{ $text }}
               </div></a
             >
           {{ end }}
         {{ end }}
       </div>
     {{ end }}
-
   </article>
 {{ end }}

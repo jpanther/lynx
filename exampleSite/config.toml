@@ -1,9 +1,5 @@
 theme = "lynx"
-languageCode = "en-au"
-defaultContentLanguage = "en"
-
 title = "Lynx"
-# copyright = "Copy, _right?_ :thinking_face:"
 
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
