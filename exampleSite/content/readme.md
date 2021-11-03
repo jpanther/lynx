@@ -1,6 +1,8 @@
-# Lynx
+---
+title: Lynx
+---
 
-Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like LinkTree.
+Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like Linktree.
 
 🌏 [Demo site](https://jpanther.github.io/lynx/)  
 🐛 [Bug reports & issues](https://github.com/jpanther/lynx/issues)  

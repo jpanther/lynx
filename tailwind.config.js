@@ -68,7 +68,7 @@ module.exports = {
                 position: "relative",
               },
               code: {
-                color: theme("colors.secondary.700"),
+                color: theme("colors.primary.800"),
               },
               "pre code": {
                 color: theme("colors.neutral.700"),
@@ -95,7 +95,7 @@ module.exports = {
                 fontWeight: "600",
               },
               mark: {
-                backgroundColor: theme("colors.secondary.200"),
+                backgroundColor: theme("colors.primary.200"),
                 padding: "0.1rem 0.2rem",
                 borderRadius: "0.12rem",
               },
@@ -142,7 +142,7 @@ module.exports = {
                 color: theme("colors.neutral.400"),
               },
               code: {
-                color: theme("colors.secondary.400"),
+                color: theme("colors.primary.500"),
               },
               "a code": {
                 color: theme("colors.white"),
@@ -166,7 +166,7 @@ module.exports = {
                 color: theme("colors.neutral.300"),
               },
               mark: {
-                backgroundColor: theme("colors.secondary.400"),
+                backgroundColor: theme("colors.primary.400"),
               },
             },
           ],

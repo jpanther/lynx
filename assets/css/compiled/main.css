@@ -782,7 +782,7 @@ video {
 }
 
 .prose code {
-  color: #111827;
+  color: #6b21a8;
   font-weight: 600;
   font-size: 0.875em;
 }
@@ -1003,6 +1003,7 @@ video {
 }
 
 .prose mark {
+  background-color: #e9d5ff;
   padding: 0.1rem 0.2rem;
   border-radius: 0.12rem;
 }
@@ -1169,6 +1170,14 @@ body button {
   margin-right: 0.25rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .\!mb-9 {
   margin-bottom: 2.25rem !important;
 }
@@ -1302,6 +1311,11 @@ body button {
   color: rgba(24, 24, 27, var(--tw-text-opacity));
 }
 
+.text-neutral-800 {
+  --tw-text-opacity: 1;
+  color: rgba(39, 39, 42, var(--tw-text-opacity));
+}
+
 .text-neutral-400 {
   --tw-text-opacity: 1;
   color: rgba(161, 161, 170, var(--tw-text-opacity));
@@ -1374,6 +1388,7 @@ body button {
   }
 
   .dark\:prose-light code {
+    color: #a855f7;
   }
 
   .dark\:prose-light a code {
@@ -1404,6 +1419,7 @@ body button {
   }
 
   .dark\:prose-light mark {
+    background-color: #c084fc;
   }
 
   .dark\:bg-neutral-800 {

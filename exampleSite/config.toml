@@ -8,9 +8,12 @@ disableKinds = ["taxonomy", "term"]
   name = "Lynx"
   image = "author.jpg"
   links = [
+    { link = { href = "readme/", text = "View the readme" } },
     { github = "https://github.com/jpanther/lynx" },
-    { discord = "https://discord.gg/invitecode" },
-    { instagram = "https://instagram.com/username" },
-    { soundcloud = "https://soundcloud.com/username" },
-    { twitter = "https://twitter.com/username" },
+    { twitter = "https://twitter.com/jpanther" },
+    { instagram = "#" },
+    { soundcloud = "#" },
   ]
+
+[markup.highlight]
+  noClasses = false
