@@ -73,7 +73,7 @@ Acceptable link parameters are:
 [author]
 links = {
    # Simple link
-   { github = { href = "https://github.com/jpanther/lynx", text = "Visit my website" }}
+   { github = "https://github.com/jpanther/lynx" }
 
    # Custom link
    { link = { href = "https://github.com/jpanther/lynx", text = "GitHub Project", icon = "github" }}
