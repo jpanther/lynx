@@ -28,10 +28,12 @@
               href="{{ $href }}"
               target="_blank"
               rel="me noopener noreferrer"
-              ><div class="">
-                <span class="mr-1">{{ partial "icon.html" $icon }}</span>{{ $text | emojify }}
-              </div></a
             >
+              {{- with $icon -}}
+                <span class="mr-1">{{ partial "icon.html" . }}</span>
+              {{- end -}}
+              {{ $text | emojify }}
+            </a>
           {{ end }}
         {{ end }}
       </div>
