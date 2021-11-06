@@ -1,21 +1,28 @@
 link:
+  amazon: Amazon
+  apple: Apple
   codepen: CodePen
   dev: DEV
   discord: Discord
   dribbble: Dribbble
   email: Email
   facebook: Facebook
+  flickr: Flickr
   foursquare: Foursquare
   github: GitHub
   gitlab: GitLab
+  google: Google
   instagram: Instagram
   keybase: Keybase
+  kickstarter: Kickstarter
   lastfm: Last.fm
   link: "Site internet"
   linkedin: LinkedIn
   mastodon: Mastodon
   medium: Medium
+  microsoft: Microsoft
   orcid: ORCiD
+  patreon: Patreon
   pinterest: Pinterest
   reddit: Reddit
   researchgate: ResearchGate
@@ -23,9 +30,12 @@ link:
   snapchat: Snapchat
   soundcloud: Soundcloud
   steam: Steam
+  telegram: Telegram
   tiktok: TikTok
+  tumblr: Tumblr
   twitch: Twitch
   twitter: Twitter
+  whatsapp: WhatsApp
   youtube: YouTube
 
 footer:
