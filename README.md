@@ -76,7 +76,7 @@ links = {
    { github = "https://github.com/jpanther/lynx" }
 
    # Custom link
-   { link = { href = "https://github.com/jpanther/lynx", text = "GitHub Project", icon = "github" }}
+   { github = { href = "https://github.com/jpanther/lynx", text = "GitHub Project" } }
 }
 ```
 
@@ -92,7 +92,11 @@ The custom CSS file will automatically be included and minified when the site is
 
 If you need icons, you can find free SVG icons for many services at [FontAwesome](https://fontawesome.com/icons?d=gallery&p=2&s=brands).
 
-As an example, to make a custom link for FontAwesome...
+#### Example
+
+Let's make a custom link for FontAwesome using the FA flag as the link icon and a gradient background as the link style.
+
+> If you prefer to inspect the code, the exampleSite contains a custom link to FontAwesome that demonstrates this process.
 
 1. Place the SVG icon in the icons folder `/assets/icons/font-awesome.svg`.
 2. Create the CSS file at `/assets/css/custom.css` and add in a rule to style the link:
@@ -118,8 +122,6 @@ As an example, to make a custom link for FontAwesome...
    ```
 
 When the site is rebuilt, the new custom link will appear.
-
-> If you prefer to inspect the code, the exampleSite contains a custom link to FontAwesome that demonstrates this process.
 
 ---
 
