@@ -1283,6 +1283,10 @@ body button {
   justify-content: center;
 }
 
+.place-self-start {
+  place-self: start;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1354,6 +1358,11 @@ body button {
 .text-neutral-900 {
   --tw-text-opacity: 1;
   color: rgba(24, 24, 27, var(--tw-text-opacity));
+}
+
+.text-neutral-500 {
+  --tw-text-opacity: 1;
+  color: rgba(113, 113, 122, var(--tw-text-opacity));
 }
 
 .text-neutral-800 {
