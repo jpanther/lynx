@@ -1,9 +1,5 @@
 theme = "lynx"
-languageCode = "en-au"
-defaultContentLanguage = "en"
-
 title = "Lynx"
-# copyright = "Copy, _right?_ :thinking_face:"
 
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
@@ -12,9 +8,16 @@ disableKinds = ["taxonomy", "term"]
   name = "Lynx"
   image = "author.jpg"
   links = [
+    { link = { href = "https://github.com/jpanther/lynx/blob/stable/README.md", text = "View the readme", icon = "github" } },
+    { link = { href = "styles/", text = "All the link styles", target = "_self" } },
     { github = "https://github.com/jpanther/lynx" },
-    { discord = "https://discord.gg/invitecode" },
-    { instagram = "https://instagram.com/username" },
-    { soundcloud = "https://soundcloud.com/username" },
-    { twitter = "https://twitter.com/username" },
+    { twitter = "https://twitter.com/jpanther" },
+    { font-awesome = { href = "https://fontawesome.com/", text = "FontAwesome" } },
   ]
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true

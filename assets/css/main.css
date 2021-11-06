@@ -1,12 +1,7 @@
-/*! Lynx v1.0.0 | MIT License | https://github.com/jpanther/lynx */
+/*! Lynx v1.1.0 | MIT License | https://github.com/jpanther/lynx */
 
 @tailwind base;
 @tailwind components;
-
-body a,
-body button {
-  /* @apply transition; */
-}
 
 /* Scale SVG icons to text size */
 .icon svg {
@@ -19,6 +14,13 @@ body button {
   @apply text-white bg-primary-700 hover:brightness-90;
 }
 
+.link-amazon {
+  @apply text-neutral-900;
+  background-color: #ff9900;
+}
+.link-apple {
+  background-color: #333;
+}
 .link-codepen {
   background-color: #1e1f26;
 }
@@ -34,6 +36,9 @@ body button {
 .link-facebook {
   background-color: #1877f2;
 }
+.link-flickr {
+  background-color: #ff0184;
+}
 .link-foursquare {
   background-color: #0732a2;
 }
@@ -43,12 +48,19 @@ body button {
 .link-gitlab {
   background-color: #554488;
 }
+.link-google {
+  background-color: #4285f4;
+}
 .link-instagram {
   background-color: #c13584;
   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 .link-keybase {
   background-color: #33a0ff;
+}
+.link-kickstarter {
+  @apply text-neutral-900;
+  background-color: #06ce78;
 }
 .link-lastfm {
   background-color: #d51007;
@@ -62,8 +74,14 @@ body button {
 .link-medium {
   background-color: #00ab6c;
 }
+.link-microsoft {
+  background-color: #08a6f0;
+}
 .link-orcid {
   background-color: #a6ce39;
+}
+.link-patreon {
+  background-color: #ff434d;
 }
 .link-pinterest {
   background-color: #e60023;
@@ -88,8 +106,14 @@ body button {
 .link-steam {
   background-color: #000;
 }
+.link-telegram {
+  background-color: #25a3e1;
+}
 .link-tiktok {
   background-color: #fe2d55;
+}
+.link-tumblr {
+  background-color: #001935;
 }
 .link-twitch {
   background-color: #9146ff;
@@ -97,8 +121,18 @@ body button {
 .link-twitter {
   background-color: #1da1f2;
 }
+.link-whatsapp {
+  background-color: #45d82c;
+  background: linear-gradient(120deg, #12990b, #45d82c);
+}
 .link-youtube {
   background-color: #ff0000;
+}
+
+/* -- Chroma Highlight -- */
+/* Background */
+.prose .chroma {
+  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
 }
 
 @tailwind utilities;

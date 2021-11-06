@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <article class="flex flex-col items-center justify-center mt-10">
+    <nav class="place-self-start">
+      <a href="{{ "/" | relURL }}" class="text-neutral-500">&larr; {{ i18n "nav.home" }}</a>
+    </nav>
+    <header>
+      <h1 class="mt-2 mb-6 text-4xl font-extrabold text-center text-neutral-800 dark:text-white">
+        {{ .Title | emojify }}
+      </h1>
+    </header>
+    <section class="prose dark:prose-light">
+      {{ .Content | emojify }}
+    </section>
+  </article>
+{{ end }}

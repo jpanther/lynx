@@ -1,0 +1,8 @@
+<a
+  class="link link-{{ .Get 0 }} sm:px-24 min-w-full py-2 mb-3 text-lg rounded text-center"
+  href="#"
+  onclick="navigator.clipboard.writeText({{ .Get 0 }})"
+>
+  <span class="mr-1">{{ partial "icon.html" (.Get 0) }}</span>
+  {{ .Get 0 }}
+</a>

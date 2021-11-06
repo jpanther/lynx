@@ -16,7 +16,7 @@ link:
   keybase: Keybase
   kickstarter: Kickstarter
   lastfm: Last.fm
-  link: Website
+  link: "Site internet"
   linkedin: LinkedIn
   mastodon: Mastodon
   medium: Medium
@@ -38,8 +38,8 @@ link:
   whatsapp: WhatsApp
   youtube: YouTube
 
-nav:
-  home: Home
+# nav:
+#   home: Home
 
 footer:
-  powered_by: "Powered by {{ .Hugo }} &amp; {{ .Lynx }}"
+  powered_by: "Propulsé par {{ .Hugo }} &amp; {{ .Lynx }}"
