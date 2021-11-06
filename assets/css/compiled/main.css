@@ -1008,11 +1008,6 @@ video {
   border-radius: 0.12rem;
 }
 
-body a,
-body button {
-  /* @apply transition; */
-}
-
 /* Scale SVG icons to text size */
 
 .icon svg {
@@ -1185,6 +1180,30 @@ body button {
 
 .link-youtube {
   background-color: #ff0000;
+}
+
+/* -- Chroma Highlight -- */
+
+/* Background */
+
+.prose .chroma {
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(250, 250, 250, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(63, 63, 70, var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .prose .chroma {
+    --tw-bg-opacity: 1;
+    background-color: rgba(63, 63, 70, var(--tw-bg-opacity));
+  }
+
+  .prose .chroma {
+    --tw-text-opacity: 1;
+    color: rgba(228, 228, 231, var(--tw-text-opacity));
+  }
 }
 
 .relative {

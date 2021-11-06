@@ -65,9 +65,11 @@ Links can either be a simple string containing the URL for the link, or an objec
 
 Acceptable link parameters are:
 
-- `href` = the URL the link should point to
-- `icon` = the name of the icon to use for this link (optional)
-- `text` = the link text (optional)
+- `href` = the URL the link should point to (required)
+- `icon` = the name of the icon to use for this link
+- `text` = the link text
+- `target` = the target of the link (default: `_blank`)
+- `title` = the HTML title of the link
 
 ```toml
 [author]

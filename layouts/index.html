@@ -18,15 +18,20 @@
             {{ $href := $data }}
             {{ $icon := $type }}
             {{ $text := i18n (printf "link.%s" $type) }}
+            {{ $target := "_blank" }}
+            {{ $title := "" }}
             {{ if reflect.IsMap $data }}
               {{ with $data.href }}{{ $href = . }}{{ end }}
               {{ with $data.icon }}{{ $icon = . }}{{ end }}
               {{ with $data.text }}{{ $text = . }}{{ end }}
+              {{ with $data.target }}{{ $target = . }}{{ end }}
+              {{ with $data.title }}{{ $title = . }}{{ end }}
             {{ end }}
             <a
               class="link link-{{ $type }} sm:px-24 min-w-full py-2 mb-3 text-lg rounded"
               href="{{ $href }}"
-              target="_blank"
+              target="{{ $target }}"
+              {{ with $title }}title="{{ . }}"{{ end }}
               rel="me noopener noreferrer"
             >
               {{- with $icon -}}

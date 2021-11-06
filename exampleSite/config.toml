@@ -8,8 +8,8 @@ disableKinds = ["taxonomy", "term"]
   name = "Lynx"
   image = "author.jpg"
   links = [
-    { link = { href = "readme/", text = "View the readme" } },
-    { link = { href = "styles/", text = "All the link styles" } },
+    { link = { href = "https://github.com/jpanther/lynx/blob/stable/README.md", text = "View the readme" } },
+    { link = { href = "styles/", text = "All the link styles", target = "_self" } },
     { github = "https://github.com/jpanther/lynx" },
     { twitter = "https://twitter.com/jpanther" },
     { font-awesome = { href = "https://fontawesome.com/", text = "FontAwesome" } },

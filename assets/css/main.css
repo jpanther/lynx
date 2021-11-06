@@ -3,11 +3,6 @@
 @tailwind base;
 @tailwind components;
 
-body a,
-body button {
-  /* @apply transition; */
-}
-
 /* Scale SVG icons to text size */
 .icon svg {
   height: 1em;
@@ -132,6 +127,12 @@ body button {
 }
 .link-youtube {
   background-color: #ff0000;
+}
+
+/* -- Chroma Highlight -- */
+/* Background */
+.prose .chroma {
+  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
 }
 
 @tailwind utilities;
