@@ -1034,6 +1034,16 @@ body button {
   filter: var(--tw-filter);
 }
 
+.link-amazon {
+  --tw-text-opacity: 1;
+  color: rgba(24, 24, 27, var(--tw-text-opacity));
+  background-color: #ff9900;
+}
+
+.link-apple {
+  background-color: #333;
+}
+
 .link-codepen {
   background-color: #1e1f26;
 }
@@ -1054,6 +1064,10 @@ body button {
   background-color: #1877f2;
 }
 
+.link-flickr {
+  background-color: #ff0184;
+}
+
 .link-foursquare {
   background-color: #0732a2;
 }
@@ -1066,6 +1080,10 @@ body button {
   background-color: #554488;
 }
 
+.link-google {
+  background-color: #4285f4;
+}
+
 .link-instagram {
   background-color: #c13584;
   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
@@ -1073,6 +1091,12 @@ body button {
 
 .link-keybase {
   background-color: #33a0ff;
+}
+
+.link-kickstarter {
+  --tw-text-opacity: 1;
+  color: rgba(24, 24, 27, var(--tw-text-opacity));
+  background-color: #06ce78;
 }
 
 .link-lastfm {
@@ -1091,8 +1115,16 @@ body button {
   background-color: #00ab6c;
 }
 
+.link-microsoft {
+  background-color: #08a6f0;
+}
+
 .link-orcid {
   background-color: #a6ce39;
+}
+
+.link-patreon {
+  background-color: #ff434d;
 }
 
 .link-pinterest {
@@ -1126,8 +1158,16 @@ body button {
   background-color: #000;
 }
 
+.link-telegram {
+  background-color: #25a3e1;
+}
+
 .link-tiktok {
   background-color: #fe2d55;
+}
+
+.link-tumblr {
+  background-color: #001935;
 }
 
 .link-twitch {
@@ -1136,6 +1176,11 @@ body button {
 
 .link-twitter {
   background-color: #1da1f2;
+}
+
+.link-whatsapp {
+  background-color: #45d82c;
+  background: linear-gradient(120deg, #12990b, #45d82c);
 }
 
 .link-youtube {
