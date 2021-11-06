@@ -9,6 +9,7 @@ disableKinds = ["taxonomy", "term"]
   image = "author.jpg"
   links = [
     { link = { href = "readme/", text = "View the readme" } },
+    { link = { href = "styles/", text = "All the link styles" } },
     { github = "https://github.com/jpanther/lynx" },
     { twitter = "https://twitter.com/jpanther" },
     { font-awesome = { href = "https://fontawesome.com/", text = "FontAwesome" } },
@@ -16,3 +17,7 @@ disableKinds = ["taxonomy", "term"]
 
 [markup.highlight]
   noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true
