@@ -11,8 +11,7 @@ disableKinds = ["taxonomy", "term"]
     { link = { href = "readme/", text = "View the readme" } },
     { github = "https://github.com/jpanther/lynx" },
     { twitter = "https://twitter.com/jpanther" },
-    { instagram = "#" },
-    { soundcloud = "#" },
+    { font-awesome = { href = "https://fontawesome.com/", text = "FontAwesome" } },
   ]
 
 [markup.highlight]
