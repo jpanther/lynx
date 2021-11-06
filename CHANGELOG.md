@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2021-11-06
+
 ### Added
 
 - Support for Amazon, Apple, Flickr, Google, Kickstarter, Microsoft, Patreon, Telegram, Tumblr and WhatsApp
@@ -31,5 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fathom Analytics and Google Analytics support
 - Favicons support
 
-[unreleased]: https://github.com/jpanther/lynx/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/jpanther/lynx/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/jpanther/lynx/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/jpanther/lynx/releases/tags/v1.0.0
