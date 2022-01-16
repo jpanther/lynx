@@ -1,15 +1,15 @@
-# baseURL = "https://your_domain.com/"
+baseURL = "https://lostmonkey.id"
 languageCode = "en"
 defaultContentLanguage = "en"
 
-title = "Lynx"
+title = "Lost Monkey"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
 [author]
-  # name = "Your name here"
+  name = "Lost Monkey"
   # image = "img/author.jpg"  # path relative to static directory
 
   links = [
@@ -27,7 +27,7 @@ disableKinds = ["taxonomy", "term"]
     # { github = "https://github.com/username" },
     # { gitlab = "https://gitlab.com/username" },
     # { google = "https://www.google.com/" },
-    # { instagram = "https://instagram.com/username" },
+     { instagram = "https://instagram.com/lostmonkey.id" },
     # { keybase = "https://keybase.io/username" },
     # { kickstarter = "https://www.kickstarter.com/profile/username" },
     # { lastfm = "https://lastfm.com/user/username" },
