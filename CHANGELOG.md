@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Upgrade to Tailwind v3.1.3
+- Adjusted contrast of certain text to improve accessibility
 
 ## [1.1.0] - 2021-11-06
 
