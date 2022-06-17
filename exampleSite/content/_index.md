@@ -2,4 +2,4 @@
 description: "This is a demo of the Lynx theme for Hugo."
 ---
 
-A simple links theme for Hugo built with Tailwind CSS.
+View the readme or check out all the link styles available using the links below.

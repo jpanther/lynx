@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Support for new author `headline` parameter
+- Automatic author image resizing when image is provided as a Hugo asset
 - Alt text to author image ([#8](https://github.com/jpanther/lynx/pull/8))
 - Expanded Emoji support in page titles
 

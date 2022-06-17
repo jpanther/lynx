@@ -6,6 +6,7 @@ disableKinds = ["taxonomy", "term"]
 
 [author]
   name = "Lynx"
+  headline = "A simple links theme for Hugo built with Tailwind CSS"
   image = "author.jpg"
   links = [
     { link = { href = "https://github.com/jpanther/lynx/blob/stable/README.md", text = "View the readme", icon = "github" } },

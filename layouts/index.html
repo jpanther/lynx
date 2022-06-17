@@ -2,15 +2,32 @@
   <article class="flex flex-col items-center justify-center h-full mt-10 text-center">
     <header class="flex flex-col items-center mb-3">
       {{ with .Site.Author.image }}
+        {{ $src := . }}
+        {{ $resource := "" }}
+        {{ if $.Page.Resources.GetMatch $src }}
+          {{ $resource = $.Page.Resources.GetMatch $src }}
+        {{ else if resources.GetMatch $src }}
+          {{ $resource = resources.Get $src }}
+        {{ end }}
+        {{ with $resource }}
+          {{ $src = (.Fill "288x288").RelPermalink }}
+        {{ end }}
         <img
           class="mb-2 rounded-full w-36 h-36"
-          src="{{ . | relURL }}"
-          alt="{{ $.Site.Author.name }}"
+          width="144"
+          height="144"
+          alt="{{ $.Site.Author.name | default "Author" }}"
+          src="{{ $src }}"
         />
       {{ end }}
       <h1 class="text-4xl font-extrabold dark:text-white">
         {{ .Params.title | default .Site.Author.name | default .Site.Title | emojify }}
       </h1>
+      {{ with .Site.Author.headline }}
+        <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
+          {{ . | markdownify | emojify }}
+        </h2>
+      {{ end }}
       {{ with .Content }}
         <section class="pt-5 prose dark:prose-invert">{{ . | emojify }}</section>
       {{ end }}
