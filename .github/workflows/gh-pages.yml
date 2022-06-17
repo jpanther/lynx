@@ -7,12 +7,13 @@ on:
 
 jobs:
   build-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-20.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true
           fetch-depth: 0

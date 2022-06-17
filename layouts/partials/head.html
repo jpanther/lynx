@@ -10,8 +10,8 @@
     <title>{{ .Site.Title }}</title>
     <meta name="title" content="{{ .Site.Title }}" />
   {{- else -}}
-    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
-    <meta name="title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+    <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
+    <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
   {{- end }}
   {{/* Metadata */}}
   {{ with .Params.Description -}}
@@ -32,25 +32,21 @@
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
   {{ end -}}
-  {{/* Styles */}}
-  {{ $mainCSS := resources.Get "css/compiled/main.css" }}
-  {{ $mainStyles := $mainCSS | resources.Minify | resources.Fingerprint "sha512" }}
+  {{/* Asset bundles */}}
+  {{ $assets := newScratch }}
+  {{ $cssMain := resources.Get "css/compiled/main.css" }}
+  {{ $assets.Add "css" (slice $cssMain) }}
+  {{ $cssCustom := resources.Get "css/custom.css" }}
+  {{ if $cssCustom }}
+    {{ $assets.Add "css" (slice $cssCustom) }}
+  {{ end }}
+  {{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint "sha512" }}
   <link
     type="text/css"
     rel="stylesheet"
-    href="{{ $mainStyles.RelPermalink }}"
-    integrity="{{ $mainStyles.Data.Integrity }}"
+    href="{{ $bundleCSS.RelPermalink }}"
+    integrity="{{ $bundleCSS.Data.Integrity }}"
   />
-  {{ $customCSS := resources.Get "css/custom.css" }}
-  {{ if $customCSS }}
-    {{ $customStyles := $customCSS | resources.Minify | resources.Fingerprint "sha512" }}
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="{{ $customStyles.RelPermalink }}"
-      integrity="{{ $customStyles.Data.Integrity }}"
-    />
-  {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
     {{ partialCached "favicons.html" .Site }}

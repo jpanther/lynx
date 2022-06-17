@@ -1,11 +1,12 @@
 {
   "name": "hugo-lynx-theme",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Lynx theme for Hugo",
   "scripts": {
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
-    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/lynx/ -p 8008"
+    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/lynx/ -p 8008",
+    "lighthouse": "lhci autorun"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,9 @@
   },
   "homepage": "https://github.com/jpanther/lynx#readme",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.4.1",
-    "prettier": "^2.4.1",
-    "prettier-plugin-go-template": "^0.0.11",
-    "tailwindcss": "^2.2.19"
+    "@tailwindcss/typography": "^0.5.2",
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13",
+    "tailwindcss": "^3.1.3"
   }
 }
