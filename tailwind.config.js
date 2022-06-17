@@ -1,15 +1,12 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: {
-    content: [
-      "./layouts/**/*.html",
-      "./content/**/*.{html,md}",
-      "./themes/lynx/layouts/**/*.html",
-      "./themes/lynx/content/**/*.{html,md}",
-    ],
-  },
+  content: [
+    "./layouts/**/*.html",
+    "./content/**/*.{html,md}",
+    "./themes/lynx/layouts/**/*.html",
+    "./themes/lynx/content/**/*.{html,md}",
+  ],
   darkMode: "media",
   theme: {
     colors: {

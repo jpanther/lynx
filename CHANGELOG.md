@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Alt text to author image ([#8](https://github.com/jpanther/lynx/pull/8))
 
+### Changed
+
+- Upgrade to Tailwind v3.1.3
+
 ## [1.1.0] - 2021-11-06
 
 ### Added
