@@ -10,8 +10,7 @@ Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io).
 
 ## Features
 
-- Built with Tailwind CSS JIT for minified stylesheets without any excess code
-- Fully responsive layout
+- Fully responsive layout built with Tailwind CSS 3.0
 - Dark mode (auto-switching based upon browser)
 - SVG icons from FontAwesome 5
 - HTML and Emoji support
