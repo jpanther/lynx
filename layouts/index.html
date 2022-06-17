@@ -2,13 +2,17 @@
   <article class="flex flex-col items-center justify-center h-full mt-10 text-center">
     <header class="flex flex-col items-center mb-3">
       {{ with .Site.Author.image }}
-        <img class="mb-2 rounded-full w-36 h-36" src="{{ . | relURL }}" alt="{{ $.Site.Author.name }}" />
+        <img
+          class="mb-2 rounded-full w-36 h-36"
+          src="{{ . | relURL }}"
+          alt="{{ $.Site.Author.name }}"
+        />
       {{ end }}
       <h1 class="text-4xl font-extrabold dark:text-white">
         {{ .Params.title | default .Site.Author.name | default .Site.Title | emojify }}
       </h1>
       {{ with .Content }}
-        <section class="pt-5 prose dark:prose-light">{{ . | emojify }}</section>
+        <section class="pt-5 prose dark:prose-invert">{{ . | emojify }}</section>
       {{ end }}
     </header>
     {{ with .Site.Author.links }}
