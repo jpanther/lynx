@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade to Tailwind v3.1.4 ([#12](https://github.com/jpanther/lynx/pull/12))
+
 ## [1.2.0] - 2022-06-17
 
 ### Added
