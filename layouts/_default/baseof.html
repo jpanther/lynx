@@ -2,7 +2,7 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
   {{- partial "head.html" . -}}
   <body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-white max-w-7xl"
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral max-w-7xl text-neutral-900 dark:bg-neutral-800 dark:text-white sm:px-14 md:px-24 lg:px-32"
   >
     <main class="flex-grow">{{- block "main" . }}{{- end }}</main>
     {{- partial "footer.html" . -}}

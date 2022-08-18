@@ -13,7 +13,7 @@
           {{ $src = (.Fill "288x288").RelPermalink }}
         {{ end }}
         <img
-          class="mb-2 rounded-full w-36 h-36"
+          class="mb-2 rounded-full h-36 w-36"
           width="144"
           height="144"
           alt="{{ $.Site.Author.name | default "Author" }}"
@@ -49,7 +49,7 @@
               {{ with $data.title }}{{ $title = . }}{{ end }}
             {{ end }}
             <a
-              class="link link-{{ $type }} sm:px-24 min-w-full py-2 mb-3 text-lg rounded"
+              class="link link-{{ $type }} mb-3 min-w-full rounded py-2 text-lg sm:px-24"
               href="{{ $href }}"
               target="{{ $target }}"
               {{ with $title }}title="{{ . }}"{{ end }}
