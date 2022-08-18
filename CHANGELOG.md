@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2022-08-19
+
 ### Changed
 
 - Upgrade to Tailwind v3.1.8 ([#12](https://github.com/jpanther/lynx/pull/12), [#18](https://github.com/jpanther/lynx/pull/18))
@@ -57,7 +59,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fathom Analytics and Google Analytics support
 - Favicons support
 
-[unreleased]: https://github.com/jpanther/lynx/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/jpanther/lynx/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/jpanther/lynx/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/jpanther/lynx/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/jpanther/lynx/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/jpanther/lynx/releases/tags/v1.0.0
