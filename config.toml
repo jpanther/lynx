@@ -19,6 +19,7 @@ disableKinds = ["taxonomy", "term"]
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
     # { apple = "https://www.apple.com" },
     # { codepen = "https://codepen.io/username" },
+    # { credly = "https://www.credly.com/users/username" },
     # { dev = "https://dev.to/username" },
     # { discord = "https://discord.gg/invitecode" },
     # { dribbble = "https://dribbble.com/username" },
