@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade to Typography v0.5.7 ([#23](https://github.com/jpanther/lynx/pull/23))
+
 ## [1.2.1] - 2022-08-19
 
 ### Changed
