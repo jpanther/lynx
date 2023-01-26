@@ -50,7 +50,7 @@
             {{ end }}
             <a
               class="link link-{{ $type }} mb-3 min-w-full rounded py-2 text-lg sm:px-24"
-              href="{{ $href }}"
+              href="{{ $href | safeURL }}"
               target="{{ $target }}"
               {{ with $title }}title="{{ . }}"{{ end }}
               rel="me noopener noreferrer"
