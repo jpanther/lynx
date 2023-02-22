@@ -1,1 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M503.5 204.6L502.8 202.8L433.1 21.02C431.7 17.45 429.2 14.43 425.9 12.38C423.5 10.83 420.8 9.865 417.9 9.57C415 9.275 412.2 9.653 409.5 10.68C406.8 11.7 404.4 13.34 402.4 15.46C400.5 17.58 399.1 20.13 398.3 22.9L351.3 166.9H160.8L113.7 22.9C112.9 20.13 111.5 17.59 109.6 15.47C107.6 13.35 105.2 11.72 102.5 10.7C99.86 9.675 96.98 9.295 94.12 9.587C91.26 9.878 88.51 10.83 86.08 12.38C82.84 14.43 80.33 17.45 78.92 21.02L9.267 202.8L8.543 204.6C-1.484 230.8-2.72 259.6 5.023 286.6C12.77 313.5 29.07 337.3 51.47 354.2L51.74 354.4L52.33 354.8L158.3 434.3L210.9 474L242.9 498.2C246.6 500.1 251.2 502.5 255.9 502.5C260.6 502.5 265.2 500.1 268.9 498.2L300.9 474L353.5 434.3L460.2 354.4L460.5 354.1C482.9 337.2 499.2 313.5 506.1 286.6C514.7 259.6 513.5 230.8 503.5 204.6z"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 380 380"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="gitlab-modern.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.62105263"
+     inkscape:cx="57.966102"
+     inkscape:cy="190"
+     inkscape:window-width="1128"
+     inkscape:window-height="683"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">
+.cls-1 { 
+    fill:currentColor;
+}</style>
+  </defs>
+  <path
+     class="cls-1"
+     d="m 373.68916,151.89047 -0.53425,-1.36529 -51.72298,-134.986302 a 13.474886,13.474886 0 0 0 -5.32268,-6.4109592 13.850837,13.850837 0 0 0 -15.82953,0.8508371 13.850837,13.850837 0 0 0 -4.59056,6.9649921 L 260.76526,123.79306 H 119.34821 L 84.424318,16.943748 A 13.57382,13.57382 0 0 0 79.833755,9.958969 13.850837,13.850837 0 0 0 64.004227,9.1081319 13.593607,13.593607 0 0 0 58.681548,15.519091 L 6.859631,150.44603 6.3451714,151.81133 A 96.045661,96.045661 0 0 0 38.202096,262.81589 l 0.178083,0.13851 0.474886,0.33638 78.791475,59.00456 38.98021,29.50229 23.74429,17.92694 a 15.968036,15.968036 0 0 0 19.31203,0 l 23.74429,-17.92694 38.98021,-29.50229 79.26637,-59.36073 0.19786,-0.15829 a 96.085235,96.085235 0 0 0 31.81736,-110.88585 z"
+     id="path6"
+     style="fill-opacity:0.99477601;fill-rule:nonzero;stroke-width:1.97869" />
+</svg>
