@@ -39,6 +39,8 @@ link:
   youtube: YouTube
   stack-exchange: Stack Exchange
   stack-overflow: Stack Overflow
+  peertube: PeerTube
+  etherpad: Etherpad
 
 nav:
   home: Home
