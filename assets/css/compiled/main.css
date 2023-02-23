@@ -1057,7 +1057,7 @@ video {
 }
 
 .link-gitlab {
-  background-color: #554488;
+  background-color: #FC6D26;
 }
 
 .link-google {
@@ -1165,6 +1165,22 @@ video {
 
 .link-youtube {
   background-color: #ff0000;
+}
+
+.link-stack-exchange {
+  background-color: #0095ff;
+}
+
+.link-stack-overflow {
+  background-color: #f48024;
+}
+
+.link-peertube {
+  background-color: #f8a769;
+}
+
+.link-etherpad {
+  background-color: #63d39b;
 }
 
 /* -- Chroma Highlight -- */
