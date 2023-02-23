@@ -41,6 +41,7 @@ link:
   stack-overflow: Stack Overflow
   peertube: PeerTube
   etherpad: Etherpad
+  debian: Debian
 
 nav:
   home: Home
