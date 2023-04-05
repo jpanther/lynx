@@ -10,7 +10,7 @@
           {{ $resource = resources.Get $src }}
         {{ end }}
         {{ with $resource }}
-          {{ $src = (.Fill "288x288").RelPermalink }}
+          {{ $src = (.Fill "288x288 Center").RelPermalink }}
         {{ end }}
         <img
           class="mb-2 rounded-full h-36 w-36"
