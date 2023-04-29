@@ -1463,14 +1463,14 @@ video {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 500px) {
   .sm\:min-w-0 {
     min-width: 0px;
   }
 
   .sm\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .sm\:px-14 {
@@ -1481,8 +1481,8 @@ video {
 
 @media (min-width: 768px) {
   .md\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
