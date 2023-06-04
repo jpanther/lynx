@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated GitLab icon
 - Upgrade to Tailwind v3.3.2 ([#74](https://github.com/jpanther/lynx/pull/74))
 
 ### Fixed
