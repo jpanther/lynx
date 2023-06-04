@@ -1,4 +1,4 @@
-/*! Lynx v1.2.4 | MIT License | https://github.com/jpanther/lynx */
+/*! Lynx v1.3.0 | MIT License | https://github.com/jpanther/lynx */
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@
 
 /* Links */
 .link {
-  @apply text-white bg-primary-700 hover:brightness-90;
+  @apply bg-primary-700 text-white hover:brightness-90;
 }
 
 .link-amazon {
@@ -128,11 +128,17 @@
 .link-youtube {
   background-color: #ff0000;
 }
+.link-stack-exchange {
+  background-color: #0095ff;
+}
+.link-stack-overflow {
+  background-color: #f48024;
+}
 
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
 }
 
 @tailwind utilities;

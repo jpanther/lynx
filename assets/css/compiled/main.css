@@ -1,4 +1,4 @@
-/*! Lynx v1.2.4 | MIT License | https://github.com/jpanther/lynx */
+/*! Lynx v1.3.0 | MIT License | https://github.com/jpanther/lynx */
 
 /*! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
 
@@ -1165,6 +1165,14 @@ video {
 
 .link-youtube {
   background-color: #ff0000;
+}
+
+.link-stack-exchange {
+  background-color: #0095ff;
+}
+
+.link-stack-overflow {
+  background-color: #f48024;
 }
 
 /* -- Chroma Highlight -- */

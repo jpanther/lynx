@@ -84,7 +84,7 @@
     {{ end }}
   {{ end }}
   {{/* Analytics */}}
-  {{ partialCached "analytics.html" .Site }}
+  {{ partialCached "analytics.html" . }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
   {{ if templates.Exists "partials/extend-head.html" }}
     {{ partialCached "extend-head.html" .Site }}
