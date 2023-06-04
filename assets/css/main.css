@@ -11,7 +11,7 @@
 
 /* Links */
 .link {
-  @apply text-white bg-primary-700 hover:brightness-90;
+  @apply bg-primary-700 text-white hover:brightness-90;
 }
 
 .link-amazon {
@@ -138,7 +138,7 @@
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply rounded-md text-neutral-700 bg-neutral-50 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
 }
 
 @tailwind utilities;
