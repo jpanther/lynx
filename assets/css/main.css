@@ -128,6 +128,12 @@
 .link-youtube {
   background-color: #ff0000;
 }
+.link-stack-exchange {
+  background-color: #0095ff;
+}
+.link-stack-overflow {
+  background-color: #f48024;
+}
 
 /* -- Chroma Highlight -- */
 /* Background */
