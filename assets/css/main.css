@@ -13,7 +13,11 @@
 .link {
   @apply bg-primary-700 text-white hover:brightness-90;
 }
-
+.link-playstore {
+  background-color: #333;
+}.link-appstore {
+  background-color: #4583f7;
+}
 .link-amazon {
   @apply text-neutral-900;
   background-color: #ff9900;
