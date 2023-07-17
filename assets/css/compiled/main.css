@@ -1013,7 +1013,11 @@ video {
   --tw-brightness: brightness(.9);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-
+.link-playstore {
+  background-color: #333;
+}.link-appstore {
+  background-color: #4583f7;
+}
 .link-amazon {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
