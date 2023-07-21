@@ -11,7 +11,7 @@ disableKinds = ["taxonomy", "term"]
 [author]
    name = "Mehmet Can Ertuzun"
    headline = "Portfolio"
-   image = "/mceavatar.png"  # path relative to static directory
+   image = "/mceavatar.jpeg"  # path relative to static directory
 
   links = [
      { playstore = "https://play.google.com/store/apps/dev?id=7276381215610288964&hl=en&gl=US" },
