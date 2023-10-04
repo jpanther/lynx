@@ -36,30 +36,48 @@
       <div class="flex flex-col flex-wrap min-w-full mt-4 sm:min-w-0">
         {{ range $links := . }}
           {{ range $type, $data := $links }}
-            {{ $href := $data }}
-            {{ $icon := $type }}
-            {{ $text := i18n (printf "link.%s" $type) }}
-            {{ $target := "_blank" }}
-            {{ $title := "" }}
-            {{ if reflect.IsMap $data }}
-              {{ with $data.href }}{{ $href = . }}{{ end }}
-              {{ with $data.icon }}{{ $icon = . }}{{ end }}
-              {{ with $data.text }}{{ $text = . }}{{ end }}
-              {{ with $data.target }}{{ $target = . }}{{ end }}
-              {{ with $data.title }}{{ $title = . }}{{ end }}
+            {{ if strings.HasPrefix $type "section" }}
+              {{ $icon := $type }}
+              {{ $text := $data }}
+              {{ if reflect.IsMap $data }}
+                {{ with $data.icon }}{{ $icon = . }}{{ end }}
+                {{ with $data.text }}{{ $text = . }}{{ end }}
+              {{ end }}
+              <span class="mt-3">
+                <h3>
+                  {{- with $icon -}}
+                    <span class="mr-1">{{ partial "icon.html" . }}</span>
+                  {{- end -}}
+                  {{ $text | emojify }}
+                </h3>
+                <hr class="mb-2"/>
+              </span>
+            {{ else }}
+              {{ $href := $data }}
+              {{ $icon := $type }}
+              {{ $text := i18n (printf "link.%s" $type) }}
+              {{ $target := "_blank" }}
+              {{ $title := "" }}
+              {{ if reflect.IsMap $data }}
+                {{ with $data.href }}{{ $href = . }}{{ end }}
+                {{ with $data.icon }}{{ $icon = . }}{{ end }}
+                {{ with $data.text }}{{ $text = . }}{{ end }}
+                {{ with $data.target }}{{ $target = . }}{{ end }}
+                {{ with $data.title }}{{ $title = . }}{{ end }}
+              {{ end }}
+              <a
+                class="link link-{{ $type }} mb-3 min-w-full rounded py-2 text-lg sm:px-24"
+                href="{{ $href }}"
+                target="{{ $target }}"
+                {{ with $title }}title="{{ . }}"{{ end }}
+                rel="me noopener noreferrer"
+              >
+                {{- with $icon -}}
+                  <span class="mr-1">{{ partial "icon.html" . }}</span>
+                {{- end -}}
+                {{ $text | emojify }}
+              </a>
             {{ end }}
-            <a
-              class="link link-{{ $type }} mb-3 min-w-full rounded py-2 text-lg sm:px-24"
-              href="{{ $href }}"
-              target="{{ $target }}"
-              {{ with $title }}title="{{ . }}"{{ end }}
-              rel="me noopener noreferrer"
-            >
-              {{- with $icon -}}
-                <span class="mr-1">{{ partial "icon.html" . }}</span>
-              {{- end -}}
-              {{ $text | emojify }}
-            </a>
           {{ end }}
         {{ end }}
       </div>

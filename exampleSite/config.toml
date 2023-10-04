@@ -9,10 +9,13 @@ disableKinds = ["taxonomy", "term"]
   headline = "A simple links theme for Hugo built with Tailwind CSS"
   image = "author.jpg"
   links = [
+    { section-link = { text = "Lynx Details" } },
     { link = { href = "https://github.com/jpanther/lynx/blob/stable/README.md", text = "View the readme", icon = "github" } },
     { link = { href = "styles/", text = "All the link styles", target = "_self" } },
+    { section = "Social" },
     { github = "https://github.com/jpanther/lynx" },
     { twitter = "https://twitter.com/jpanther" },
+    { section = "Favorite Links" },
     { font-awesome = { href = "https://fontawesome.com/", text = "FontAwesome" } },
   ]
 
