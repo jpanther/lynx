@@ -44,4 +44,5 @@ These are all the built-in link styles available in Lynx. Don't forget that you 
 {{< link twitch >}}
 {{< link twitter >}}
 {{< link whatsapp >}}
+{{< link x >}}
 {{< link youtube >}}
