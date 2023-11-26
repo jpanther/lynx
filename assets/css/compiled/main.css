@@ -1222,6 +1222,10 @@ video {
   background: linear-gradient(120deg, #12990b, #45d82c);
 }
 
+.link-x{
+  background-color: #000;
+}
+
 .link-youtube {
   background-color: #ff0000;
 }
