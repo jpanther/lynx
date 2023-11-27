@@ -35,6 +35,7 @@ These are all the built-in link styles available in Lynx. Don't forget that you 
 {{< link slack >}}
 {{< link snapchat >}}
 {{< link soundcloud >}}
+{{< link spotify >}}
 {{< link stack-exchange >}}
 {{< link stack-overflow >}}
 {{< link steam >}}

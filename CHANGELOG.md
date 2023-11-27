@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Support for X (Twitter) ([#107](https://github.com/jpanther/lynx/pull/107))
+- Support for Spotify
 
 ## [1.3.1] - 2023-09-10
 

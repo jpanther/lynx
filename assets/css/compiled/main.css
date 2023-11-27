@@ -1193,6 +1193,10 @@ video {
   background: linear-gradient(120deg, #ff8800, #ff3300);
 }
 
+.link-spotify {
+  background-color: #1db954;
+}
+
 .link-steam {
   background-color: #000;
 }
