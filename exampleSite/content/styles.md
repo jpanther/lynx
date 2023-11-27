@@ -40,6 +40,7 @@ These are all the built-in link styles available in Lynx. Don't forget that you 
 {{< link stack-overflow >}}
 {{< link steam >}}
 {{< link telegram >}}
+{{< link threads >}}
 {{< link tiktok >}}
 {{< link tumblr >}}
 {{< link twitch >}}
