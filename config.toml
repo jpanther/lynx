@@ -8,7 +8,7 @@ title = "Lynx"
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
-[author]
+[params.author]
   # name = "Your name here"
   # headline = "An awesome person"
   # image = "img/author.jpg"  # path relative to static directory
@@ -42,10 +42,12 @@ disableKinds = ["taxonomy", "term"]
     # { slack = "https://workspace.url/team/userid" },
     # { snapchat = "https://snapchat.com/add/username" },
     # { soundcloud = "https://soundcloud.com/username" },
+    # { spotify = "https://spotify.com/user/username" },
     # { stack-exchange = "https://stackexchange.com/users/userid/username" },
     # { stack-overflow = "https://stackoverflow.com/users/userid/username" },
     # { steam = "https://steamcommunity.com/profiles/userid" },
     # { telegram = "https://t.me/username" },
+    # { threads = "https://threads.com/username" },
     # { tiktok = "https://tiktok.com/@username" },
     # { tumblr = "https://username.tumblr.com" },
     # { twitch = "https://twitch.tv/username" },

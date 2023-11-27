@@ -2,8 +2,8 @@
 
 Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io). It's built using Tailwind CSS and inspired by services like LinkTree.
 
-🌏 [Demo site](https://jpanther.github.io/lynx/)  
-🐛 [Bug reports & issues](https://github.com/jpanther/lynx/issues)  
+🌏 [Demo site](https://jpanther.github.io/lynx/)
+🐛 [Bug reports & issues](https://github.com/jpanther/lynx/issues)
 💡 [Questions & feature requests](https://github.com/jpanther/lynx/discussions)
 
 ![Screenshot](https://raw.githubusercontent.com/jpanther/lynx/stable/images/screenshot.png)
@@ -71,7 +71,7 @@ Acceptable link parameters are:
 - `title` = the HTML title of the link
 
 ```toml
-[author]
+[params.author]
 links = {
    # Simple link
    { github = "https://github.com/jpanther/lynx" }

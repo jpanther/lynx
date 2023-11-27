@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to Lynx will be documented in this file. Things that need particular attention when upgrading from a prior version are marked ⚠️.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support for Spotify and Threads
 - Support for X (Twitter) ([#107](https://github.com/jpanther/lynx/pull/107))
+
+### Changed
+
+- ⚠️ Author param block in site config moved to `params.author` to align with recent deprecations in the Hugo project
 
 ## [1.3.1] - 2023-09-10
 

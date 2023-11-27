@@ -1,7 +1,7 @@
 {{ define "main" }}
   <article class="flex flex-col items-center justify-center h-full mt-10 text-center">
     <header class="flex flex-col items-center mb-3">
-      {{ with .Site.Author.image }}
+      {{ with .Site.Params.Author.image }}
         {{ $src := . }}
         {{ $resource := "" }}
         {{ if $.Page.Resources.GetMatch $src }}
@@ -16,14 +16,14 @@
           class="mb-2 rounded-full h-36 w-36"
           width="144"
           height="144"
-          alt="{{ $.Site.Author.name | default "Author" }}"
+          alt="{{ $.Site.Params.Author.name | default "Author" }}"
           src="{{ $src }}"
         />
       {{ end }}
       <h1 class="text-4xl font-extrabold dark:text-white">
-        {{ .Params.title | default .Site.Author.name | default .Site.Title | emojify }}
+        {{ .Params.title | default .Site.Params.Author.name | default .Site.Title | emojify }}
       </h1>
-      {{ with .Site.Author.headline }}
+      {{ with .Site.Params.Author.headline }}
         <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
           {{ . | markdownify | emojify }}
         </h2>
@@ -32,7 +32,7 @@
         <section class="pt-5 prose dark:prose-invert">{{ . | emojify }}</section>
       {{ end }}
     </header>
-    {{ with .Site.Author.links }}
+    {{ with .Site.Params.Author.links }}
       <div class="flex flex-col flex-wrap min-w-full mt-4 sm:min-w-0">
         {{ range $links := . }}
           {{ range $type, $data := $links }}

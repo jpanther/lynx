@@ -4,7 +4,7 @@ title = "Lynx"
 enableEmoji = true
 disableKinds = ["taxonomy", "term"]
 
-[author]
+[params.author]
   name = "Lynx"
   headline = "A simple links theme for Hugo built with Tailwind CSS"
   image = "author.jpg"
