@@ -80,7 +80,13 @@
   {{ with .Site.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
   {{ with .Site.Author.links }}
     {{ range $links := . }}
-      {{ range $name, $url := $links }}<link href="{{ $url }}" rel="me" />{{ end }}
+      {{ range $type, $data := $links }}
+        {{ $href := $data }}
+        {{ if reflect.IsMap $data }}
+          {{ with $data.href }}{{ $href = . }}{{ end }}
+        {{ end }}
+        <link href="{{ $href | safeURL }}" rel="me" />
+      {{ end }}
     {{ end }}
   {{ end }}
   {{/* Analytics */}}
