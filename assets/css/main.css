@@ -21,6 +21,10 @@
 .link-apple {
   background-color: #333;
 }
+.link-bluesky {
+  background: #0084ff;
+  background: linear-gradient(2.35619rad, #5a72fa 0%, #0084ff 100%);
+}
 .link-codepen {
   background-color: #1e1f26;
 }

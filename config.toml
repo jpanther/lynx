@@ -18,6 +18,7 @@ disableKinds = ["taxonomy", "term"]
     # { link = "https://link-to-some-website.com/" },
     # { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
     # { apple = "https://www.apple.com" },
+    # { bluesky = "https://bsky.app/profile/username" },
     # { codepen = "https://codepen.io/username" },
     # { dev = "https://dev.to/username" },
     # { discord = "https://discord.gg/invitecode" },
