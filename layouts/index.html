@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{ `<!-- index.html -->` | safeHTML }}
   <article class="flex flex-col items-center justify-center h-full mt-10 text-center">
     <header class="flex flex-col items-center mb-3">
       {{ with .Site.Params.Author.image }}

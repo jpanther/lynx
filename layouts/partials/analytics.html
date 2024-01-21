@@ -1,3 +1,4 @@
+{{ `<!-- partials/analytics.html -->` | safeHTML }}
 {{ if hugo.IsProduction }}
   {{ with .Site.Params.fathomAnalytics.site }}
     {{ if isset $.Site.Params.fathomanalytics "domain" }}

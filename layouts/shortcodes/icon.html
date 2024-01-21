@@ -1,3 +1,4 @@
+{{ `<!-- shortcodes/icon.html -->` | safeHTML }}
 <span class="relative inline-block align-text-bottom icon">
   {{ $icon := resources.Get (printf "icons/%s.svg" ($.Get 0)) }}
   {{ if $icon }}
