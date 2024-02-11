@@ -11,6 +11,7 @@ These are all the built-in link styles available in Lynx. Don't forget that you 
 {{< link link >}}
 {{< link amazon >}}
 {{< link apple >}}
+{{< link bluesky >}}
 {{< link codepen >}}
 {{< link dev >}}
 {{< link discord >}}
