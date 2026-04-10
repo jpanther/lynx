@@ -7,7 +7,7 @@
       {{- else }}
         &copy;
         {{ now.Format "2006" }}
-        {{ .Site.Author.name | markdownify | emojify }}
+        {{ .Site.Params.author.name | markdownify | emojify }}
       {{- end }}
     </p>
     {{/* Theme attribution */}}
