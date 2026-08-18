@@ -7,6 +7,7 @@
 
 {{ $name := .Title | default .Site.Title }}
 {{ with $legacy.name }}{{ $name = . }}{{ end }}
+{{ with .Params.title }}{{ $name = . }}{{ end }}
 {{ with $profile.name }}{{ $name = . }}{{ end }}
 {{ $headline := "" }}
 {{ with $legacy.headline }}{{ $headline = . }}{{ end }}

@@ -84,7 +84,7 @@ assert_contains edge-cases/index.html 'data-icon="link"'
 assert_not_contains edge-cases/index.html 'Missing URL'
 
 # Page front matter overrides legacy homepage fields, including empty lists.
-hugo \
+HUGO_PARAMS_KEYWORDS='site-one,site-two' hugo \
   --source "$project_dir/exampleSite" \
   --themesDir ../.. \
   --contentDir "$project_dir/testdata/home-profile" \
@@ -103,6 +103,29 @@ if grep -Fq 'View the readme' "$home_profile_output_dir/index.html"; then
 fi
 if ! grep -Fq 'data-theme=light' "$home_profile_output_dir/index.html"; then
   echo "Expected page-level homepage theme" >&2
+  exit 1
+fi
+if ! grep -Fq 'content="site-one,site-two"' "$home_profile_output_dir/index.html"; then
+  echo "Expected string-valued site keywords to render unchanged" >&2
+  exit 1
+fi
+
+# Legacy homepage title precedence and string page keywords remain compatible.
+HUGO_PARAMS_KEYWORDS='site-one,site-two' hugo \
+  --source "$project_dir/exampleSite" \
+  --themesDir ../.. \
+  --contentDir "$project_dir/testdata/legacy-home-title" \
+  --baseURL https://example.org/lynx/ \
+  --destination "$home_profile_output_dir" \
+  --minify \
+  --cleanDestinationDir >/dev/null
+
+if ! grep -A 1 '<h1 class=' "$home_profile_output_dir/index.html" | grep -Fq 'Custom Homepage Title'; then
+  echo "Expected legacy homepage title to override configured author name" >&2
+  exit 1
+fi
+if ! grep -Fq 'content="page-one,page-two"' "$home_profile_output_dir/index.html"; then
+  echo "Expected string-valued page keywords to render unchanged" >&2
   exit 1
 fi
 

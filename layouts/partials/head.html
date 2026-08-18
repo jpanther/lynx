@@ -32,7 +32,11 @@
   {{ $keywords := .Site.Params.keywords }}
   {{ if isset .Params "keywords" }}{{ $keywords = .Params.keywords }}{{ end }}
   {{ with $keywords -}}
-    <meta name="keywords" content="{{ delimit . ", " }}" />
+    {{ if reflect.IsSlice . }}
+      <meta name="keywords" content="{{ delimit . ", " }}" />
+    {{ else }}
+      <meta name="keywords" content="{{ . }}" />
+    {{ end }}
   {{- end }}
   {{ $robots := .Site.Params.robots }}
   {{ if isset .Params "robots" }}{{ $robots = .Params.robots }}{{ end }}
