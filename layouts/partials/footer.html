@@ -1,18 +1,23 @@
 <footer class="py-10">
   <div class="text-center">
+    {{ $author := .Site.Title }}
+    {{ if .IsHome }}
+      {{ with .Site.Params.author.name }}{{ $author = . }}{{ end }}
+    {{ end }}
+    {{ with .Params.profile.name }}{{ $author = . }}{{ end }}
     {{/* Copyright */}}
-    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+    <p class="theme-muted text-sm">
       {{- with .Site.Copyright }}
         {{ . | emojify | markdownify }}
       {{- else }}
         &copy;
         {{ now.Format "2006" }}
-        {{ .Site.Author.name | markdownify | emojify }}
+        {{ $author | markdownify | emojify }}
       {{- end }}
     </p>
     {{/* Theme attribution */}}
     {{ if .Site.Params.attribution | default true }}
-      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      <p class="theme-muted text-xs">
         {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
           href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
         }}

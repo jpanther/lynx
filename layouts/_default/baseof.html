@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+<html lang="{{ .Site.Language.Lang | default "en" }}" data-theme="{{ partial "theme.html" . }}">
   {{- partial "head.html" . -}}
   <body
-    class="bg-neutral m-auto flex h-screen max-w-7xl flex-col px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-white"
+    class="page-body m-auto flex h-screen max-w-7xl flex-col px-6 text-lg leading-7 sm:px-14 md:px-24 lg:px-32"
   >
     <main class="flex-grow">{{- block "main" . }}{{- end }}</main>
     {{- partial "footer.html" . -}}

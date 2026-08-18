@@ -1,0 +1,14 @@
+{{- with .url -}}
+  {{- $name := $.name | default "link" -}}
+  {{- $label := i18n (printf "link.%s" $name) | default ($name | humanize) -}}
+  <a
+    class="link link-{{ $name }} social-link"
+    href="{{ . }}"
+    target="_blank"
+    title="{{ $label }}"
+    aria-label="{{ $label }}"
+    rel="me noopener noreferrer"
+  >
+    {{ partial "icon.html" $name }}
+  </a>
+{{- end -}}

@@ -1,0 +1,27 @@
+{{- $page := .page -}}
+{{- $description := .description | plainify -}}
+{{- $images := slice -}}
+{{- range $page.Params.images -}}
+  {{- $src := . -}}
+  {{- $resource := "" -}}
+  {{- if $page.Resources.GetMatch $src -}}
+    {{- $resource = $page.Resources.GetMatch $src -}}
+  {{- else if resources.GetMatch $src -}}
+    {{- $resource = resources.GetMatch $src -}}
+  {{- end -}}
+  {{- with $resource -}}
+    {{- $images = $images | append .Permalink -}}
+  {{- else -}}
+    {{- $images = $images | append ($src | absURL) -}}
+  {{- end -}}
+{{- end -}}
+<meta property="og:url" content="{{ $page.Permalink }}" />
+<meta property="og:site_name" content="{{ $page.Site.Title | plainify }}" />
+<meta property="og:title" content="{{ $page.Title | default $page.Site.Title | plainify }}" />
+<meta property="og:type" content="website" />
+{{ with $description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+{{ range first 6 $images }}<meta property="og:image" content="{{ . }}" />{{ end }}
+<meta name="twitter:card" content="{{ if $images }}summary_large_image{{ else }}summary{{ end }}" />
+<meta name="twitter:title" content="{{ $page.Title | default $page.Site.Title | plainify }}" />
+{{ with $description }}<meta name="twitter:description" content="{{ . }}" />{{ end }}
+{{ with index $images 0 }}<meta name="twitter:image" content="{{ . }}" />{{ end }}

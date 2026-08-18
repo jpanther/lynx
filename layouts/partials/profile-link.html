@@ -1,0 +1,17 @@
+{{- with .href -}}
+  {{- $type := $.type | default "link" -}}
+  {{- $icon := $.icon | default "" -}}
+  {{- $target := $.target | default "_blank" -}}
+  <a
+    class="link link-{{ $type }} mb-3 min-w-full rounded py-2 text-lg sm:px-24"
+    href="{{ . }}"
+    target="{{ $target }}"
+    {{ with $.title }}title="{{ . }}"{{ end }}
+    rel="{{ $.rel | default "noopener noreferrer" }}"
+  >
+    {{- with $icon -}}
+      <span class="mr-1">{{ partial "icon.html" . }}</span>
+    {{- end -}}
+    {{ $.text | emojify }}
+  </a>
+{{- end -}}

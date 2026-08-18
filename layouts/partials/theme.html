@@ -1,0 +1,5 @@
+{{- $theme := .Params.theme | default "auto" | lower -}}
+{{- if not (in (slice "auto" "light" "dark") $theme) -}}
+  {{- $theme = "auto" -}}
+{{- end -}}
+{{- $theme -}}
