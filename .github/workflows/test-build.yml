@@ -4,8 +4,11 @@ on: [push]
 
 jobs:
   build:
-    name: Build Example Site
+    name: Hugo ${{ matrix.hugo-version }}
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        hugo-version: ["0.86.1", "latest"]
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -18,8 +21,12 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
+          hugo-version: ${{ matrix.hugo-version }}
 
-      - name: Build
+      - name: Test example site
+        run: ./scripts/test-example.sh
+
+      - name: Check current Hugo warnings
+        if: matrix.hugo-version == 'latest'
         working-directory: ./exampleSite
-        run: hugo --minify --themesDir ../.. --baseURL https://jpanther.github.io/lynx/
+        run: hugo --themesDir ../.. --renderToMemory --panicOnWarning
