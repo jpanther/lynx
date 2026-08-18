@@ -11,7 +11,8 @@ Lynx is designed to be a simple links page powered by [Hugo](https://gohugo.io).
 ## Features
 
 - Fully responsive layout built with Tailwind CSS 3.0
-- Dark mode (auto-switching based upon browser)
+- Multiple independent link profiles from a single Hugo site
+- Light and dark modes (automatic or forced per profile)
 - SVG icons from FontAwesome 5
 - HTML and Emoji support
 - Fathom Analytics and Google Analytics support
@@ -84,6 +85,76 @@ links = {
 Additional page content can be provided by creating a Markdown file at `content/_index.md`. The contents of this file will be displayed between the title and links. Check out the exampleSite to see this in practice.
 
 Basic content pages can also be created by placing Markdown files in the `content` directory. These can then be linked to using links in the config file or through the homepage content.
+
+### Multiple profiles
+
+Lynx can generate multiple independent link profiles from one site. The homepage uses `content/_index.md`, while each directory containing an `_index.md` file creates another profile at that path:
+
+```text
+content/
+├── _index.md
+├── work/
+│   └── _index.md
+├── music/
+│   └── _index.md
+└── band/
+    └── _index.md
+```
+
+For example, `content/work/_index.md` generates `/work/index.html`:
+
+```yaml
+---
+title: "Software"
+description: "Software engineering profile"
+images:
+  - "profile.jpg"
+keywords:
+  - "software"
+robots: "index,follow"
+theme: "dark"
+
+profile:
+  name: "Matheus Monteiro"
+  image: "profile.jpg"
+  headline: "Software Engineer"
+  description: "Cloud, Platform Engineering and Developer Experience"
+
+socials:
+  - name: "github"
+    url: "https://github.com/username"
+  - name: "linkedin"
+    url: "https://linkedin.com/in/username"
+
+links:
+  - title: "Personal website"
+    url: "https://example.com"
+    icon: "globe"
+  - title: "GitHub"
+    url: "https://github.com/username"
+    icon: "github"
+  - title: "About"
+    url: "../about/"
+    target: "_self"
+---
+Optional Markdown content appears below the profile description.
+```
+
+The profile fields are:
+
+- `profile.name`: the displayed profile name. It falls back to the page title.
+- `profile.image`: an image from the page bundle, the global `assets` directory, or the static directory.
+- `profile.headline`: a short line displayed below the name.
+- `profile.description`: a Markdown-enabled description displayed above the page content.
+- `socials`: an ordered list of icon links. Each item requires `name` and `url`.
+- `links`: an ordered list of buttons. Each item requires `title` and `url`, and optionally accepts `icon` and `target`. The default target is `_blank`.
+- `theme`: `auto`, `light`, or `dark`. The default, and fallback for unknown values, is `auto`.
+
+Use relative image paths when possible. An image next to `_index.md` is treated as a page resource and automatically resized. Images in the site `assets` directory are also processed. Other relative paths are resolved against the site's base URL, so profiles continue to work when the site is hosted below a path such as `example.com/links/`.
+
+Hugo's standard `title`, `description`, `images`, `keywords`, `robots`, `slug`, and `url` front matter fields control routing and SEO metadata. When `description` is omitted, Lynx falls back to `profile.description`, the page summary, and finally the site description.
+
+Existing single-profile sites remain compatible. The homepage falls back to `params.author` for any profile data and links not provided in `content/_index.md`. Set `links: []` explicitly to hide configured homepage links. Nested profiles never inherit the homepage author or links.
 
 ### Adding custom icons and link styles
 
