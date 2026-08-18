@@ -3,6 +3,67 @@
 @tailwind base;
 @tailwind components;
 
+/* Colour modes */
+html[data-theme="auto"] {
+  color-scheme: light dark;
+}
+html[data-theme="light"] {
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+.page-body {
+  @apply bg-white text-neutral-900;
+}
+.theme-heading {
+  @apply text-neutral-800;
+}
+.theme-muted {
+  @apply text-neutral-500;
+}
+
+html[data-theme="dark"] .page-body {
+  @apply bg-neutral-800 text-white;
+}
+html[data-theme="dark"] .theme-heading {
+  @apply text-white;
+}
+html[data-theme="dark"] .theme-muted {
+  @apply text-neutral-400;
+}
+html[data-theme="dark"] .theme-prose {
+  @apply prose-invert;
+}
+html[data-theme="dark"] .theme-lead {
+  @apply text-neutral-500;
+}
+html[data-theme="dark"] .prose .chroma {
+  @apply bg-neutral-700 text-neutral-200;
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .page-body {
+    @apply bg-neutral-800 text-white;
+  }
+  html[data-theme="auto"] .theme-heading {
+    @apply text-white;
+  }
+  html[data-theme="auto"] .theme-muted {
+    @apply text-neutral-400;
+  }
+  html[data-theme="auto"] .theme-prose {
+    @apply prose-invert;
+  }
+  html[data-theme="auto"] .theme-lead {
+    @apply text-neutral-500;
+  }
+  html[data-theme="auto"] .prose .chroma {
+    @apply bg-neutral-700 text-neutral-200;
+  }
+}
+
 /* Scale SVG icons to text size */
 .icon svg {
   height: 1em;
@@ -12,6 +73,10 @@
 /* Links */
 .link {
   @apply bg-primary-700 text-white hover:brightness-90;
+}
+
+.social-link {
+  @apply flex h-10 w-10 items-center justify-center rounded-full text-xl;
 }
 
 .link-amazon {
@@ -154,7 +219,7 @@
 /* -- Chroma Highlight -- */
 /* Background */
 .prose .chroma {
-  @apply rounded-md bg-neutral-50 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200;
+  @apply rounded-md bg-neutral-50 text-neutral-700;
 }
 
 @tailwind utilities;

@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Support for multiple independent link profiles using section branch bundles
+- Per-profile social links and automatic, light and dark colour modes
+
+### Fixed
+
+- Compatibility with current Hugo author and language APIs
+
 ## [1.4.0] - 2024-05-01
 
 ### Added

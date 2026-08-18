@@ -1,31 +1,46 @@
 <head>
   <meta charset="utf-8" />
-  {{ with .Site.LanguageCode }}
+  {{ with .Site.Language.Lang }}
     <meta http-equiv="content-language" content="{{ . }}" />
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="color-scheme" content="light dark" />
   {{/* Title */}}
+  {{ $pageTitle := .Title | default .Site.Title }}
   {{ if .IsHome -}}
-    <title>{{ .Site.Title }}</title>
-    <meta name="title" content="{{ .Site.Title }}" />
+    <title>{{ $pageTitle | emojify }}</title>
+    <meta name="title" content="{{ $pageTitle | emojify }}" />
   {{- else -}}
-    <title>{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}</title>
-    <meta name="title" content="{{ .Title | emojify }} &middot; {{ .Site.Title | emojify }}" />
+    <title>{{ $pageTitle | emojify }} &middot; {{ .Site.Title | emojify }}</title>
+    <meta name="title" content="{{ $pageTitle | emojify }} &middot; {{ .Site.Title | emojify }}" />
   {{- end }}
   {{/* Metadata */}}
-  {{ with .Params.Description -}}
-    <meta name="description" content="{{ . }}" />
-  {{- else -}}
-    <meta name="description" content="{{ $.Site.Params.Description }}" />
-  {{- end }}
-  {{ with .Site.Params.keywords -}}
-    <meta name="keywords" content="{{ . }}" />
-  {{- end }}
-  {{ with .Site.Params.robots }}
-    <meta name="robots" content="{{ . }}" />
+  {{ $description := .Params.description | default "" }}
+  {{ if not $description }}
+    {{ with .Params.profile.description }}{{ $description = . }}{{ end }}
   {{ end }}
-  {{ with .Params.robots }}
+  {{ if and (not $description) .Content }}
+    {{ $description = .Summary | plainify }}
+  {{ end }}
+  {{ if not $description }}
+    {{ with .Site.Params.description }}{{ $description = . }}{{ end }}
+  {{ end }}
+  {{ with $description -}}
+    <meta name="description" content="{{ . | plainify }}" />
+  {{- end }}
+  {{ $keywords := .Site.Params.keywords }}
+  {{ if isset .Params "keywords" }}{{ $keywords = .Params.keywords }}{{ end }}
+  {{ with $keywords -}}
+    {{ if reflect.IsSlice . }}
+      <meta name="keywords" content="{{ delimit . ", " }}" />
+    {{ else }}
+      <meta name="keywords" content="{{ . }}" />
+    {{ end }}
+  {{- end }}
+  {{ $robots := .Site.Params.robots }}
+  {{ if isset .Params "robots" }}{{ $robots = .Params.robots }}{{ end }}
+  {{ with $robots }}
     <meta name="robots" content="{{ . }}" />
   {{ end }}
   <link rel="canonical" href="{{ .Permalink }}" />
@@ -70,17 +85,38 @@
     <meta name="yandex-verification" content="{{ . }}" />
   {{ end }}
   {{/* Social */}}
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
+  {{ if or .IsHome (eq .Kind "section") }}
+    {{ partial "profile-meta.html" (dict "description" $description "page" .) }}
+  {{ else }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+  {{ end }}
   {{/* Generator */}}
   {{ if .Site.Params.attribution | default true }}
     {{ hugo.Generator }}
   {{ end }}
   {{/* Me */}}
-  {{ with .Site.Author.name }}<meta name="author" content="{{ . }}" />{{ end }}
-  {{ with .Site.Author.links }}
-    {{ range $links := . }}
-      {{ range $name, $url := $links }}<link href="{{ $url }}" rel="me" />{{ end }}
+  {{ $author := "" }}
+  {{ if .IsHome }}
+    {{ with .Site.Params.author.name }}{{ $author = . }}{{ end }}
+  {{ end }}
+  {{ with .Params.profile.name }}{{ $author = . }}{{ end }}
+  {{ with $author }}<meta name="author" content="{{ . }}" />{{ end }}
+  {{ if isset .Params "socials" }}
+    {{ range .Params.socials }}
+      {{ with .url }}<link href="{{ . }}" rel="me" />{{ end }}
+    {{ end }}
+  {{ else if .IsHome }}
+    {{ with .Site.Params.author.links }}
+      {{ range $links := . }}
+        {{ range $name, $data := $links }}
+          {{ $href := $data }}
+          {{ if reflect.IsMap $data }}
+            {{ with $data.href }}{{ $href = . }}{{ end }}
+          {{ end }}
+          {{ with $href }}<link href="{{ . }}" rel="me" />{{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
   {{ end }}
   {{/* Analytics */}}

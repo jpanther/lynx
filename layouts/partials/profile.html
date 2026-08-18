@@ -1,0 +1,124 @@
+{{ $profile := dict }}
+{{ with .Params.profile }}{{ $profile = . }}{{ end }}
+{{ $legacy := dict }}
+{{ if .IsHome }}
+  {{ with .Site.Params.author }}{{ $legacy = . }}{{ end }}
+{{ end }}
+
+{{ $name := .Title | default .Site.Title }}
+{{ with $legacy.name }}{{ $name = . }}{{ end }}
+{{ with .Params.title }}{{ $name = . }}{{ end }}
+{{ with $profile.name }}{{ $name = . }}{{ end }}
+{{ $headline := "" }}
+{{ with $legacy.headline }}{{ $headline = . }}{{ end }}
+{{ with $profile.headline }}{{ $headline = . }}{{ end }}
+{{ $image := "" }}
+{{ with $legacy.image }}{{ $image = . }}{{ end }}
+{{ with $profile.image }}{{ $image = . }}{{ end }}
+
+{{ $links := slice }}
+{{ $pageLinks := false }}
+{{ if isset .Params "links" }}
+  {{ $links = .Params.links }}
+  {{ $pageLinks = true }}
+{{ else if .IsHome }}
+  {{ with $legacy.links }}{{ $links = . }}{{ end }}
+{{ end }}
+
+
+<article class="mt-10 flex h-full flex-col items-center justify-center text-center">
+  <header class="mb-3 flex flex-col items-center">
+    {{ with $image }}
+      {{ $src := . }}
+      {{ $resource := "" }}
+      {{ if $.Resources.GetMatch $src }}
+        {{ $resource = $.Resources.GetMatch $src }}
+      {{ else if resources.GetMatch $src }}
+        {{ $resource = resources.GetMatch $src }}
+      {{ end }}
+      {{ with $resource }}
+        {{ if and (eq .MediaType.MainType "image") (ne .MediaType.SubType "svg") }}
+          {{ $src = (.Fill "288x288").RelPermalink }}
+        {{ else }}
+          {{ $src = .RelPermalink }}
+        {{ end }}
+      {{ else }}
+        {{ if not (or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "//") (hasPrefix $src "/")) }}
+          {{ $src = $src | relURL }}
+        {{ end }}
+      {{ end }}
+      <img
+        class="mb-2 h-36 w-36 rounded-full"
+        width="144"
+        height="144"
+        alt="{{ $name | default "Author" }}"
+        src="{{ $src }}"
+      />
+    {{ end }}
+    <h1 class="theme-heading text-4xl font-extrabold">
+      {{ $name | emojify }}
+    </h1>
+    {{ with $headline }}
+      <h2 class="theme-muted text-xl">
+        {{ . | markdownify | emojify }}
+      </h2>
+    {{ end }}
+    {{ with $profile.description }}
+      <section class="theme-prose prose pt-5">{{ . | markdownify | emojify }}</section>
+    {{ end }}
+    {{ with .Content }}
+      <section class="theme-prose prose pt-5">{{ . | emojify }}</section>
+    {{ end }}
+  </header>
+  {{ with .Params.socials }}
+    <div class="mb-1 mt-2 flex flex-wrap justify-center gap-3">
+      {{ range . }}
+        {{ partial "profile-social.html" . }}
+      {{ end }}
+    </div>
+  {{ end }}
+  {{ with $links }}
+    <div class="mt-4 flex min-w-full flex-col flex-wrap sm:min-w-0">
+      {{ if $pageLinks }}
+        {{ range . }}
+          {{ partial "profile-link.html" (dict
+            "href" .url
+            "icon" .icon
+            "rel" "noopener noreferrer"
+            "target" (.target | default "_blank")
+            "text" .title
+            "type" (.icon | default "link")
+            )
+          }}
+        {{ end }}
+      {{ else }}
+        {{ range $link := . }}
+          {{ range $type, $data := $link }}
+            {{ $href := $data }}
+            {{ $icon := $type }}
+            {{ $text := i18n (printf "link.%s" $type) }}
+            {{ $target := "_blank" }}
+            {{ $title := "" }}
+            {{ if reflect.IsMap $data }}
+              {{ with $data.href }}{{ $href = . }}{{ end }}
+              {{ with $data.icon }}{{ $icon = . }}{{ end }}
+              {{ with $data.text }}{{ $text = . }}{{ end }}
+              {{ with $data.target }}{{ $target = . }}{{ end }}
+              {{ with $data.title }}{{ $title = . }}{{ end }}
+            {{ end }}
+            {{ partial "profile-link.html" (dict
+              "href" $href
+              "icon" $icon
+              "rel" "me noopener noreferrer"
+              "target" $target
+              "text" $text
+              "title" $title
+              "type" $type
+              )
+            }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+</article>

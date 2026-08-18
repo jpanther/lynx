@@ -1,4 +1,7 @@
 {{ $icon := resources.Get (print "icons/" . ".svg") }}
+{{ if not $icon }}
+  {{ $icon = resources.Get "icons/link.svg" }}
+{{ end }}
 {{ if $icon }}
   <span class="icon relative inline-block align-text-bottom">
     {{ $icon.Content | safeHTML }}
